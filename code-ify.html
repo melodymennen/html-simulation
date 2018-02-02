@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free JavaScript podcasts">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code-ify</title>
+    <link rel="stylesheet" href="./styles.css" media="all">
+</head>
+<body>
+    <section class="left">
+        <div id="aside">
+            <h1>Code-ify</h1>
+            <h4>Free JavaScript podcast</h4>
+        </div>
+    </section>
+    <section class="right">
+        <div class="main">
+            <div class="tile">
+                <span>Podcast Title</span>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="tile">
+                <span>Podcast Title</span>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="tile">
+                <span>Podcast Title</span>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="tile">
+                <span>Podcast Title</span>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
+                </audio>
+            </div>
+            <bonus id="showMe" style="display: none">
+                <button class="close" onclick="closeMe()">close</button>
+                <video width="350" height="270" controls>
+                    <source src="./melody.mp4" type="video/mp4">
+                </video>
+            </bonus>
+        </div>
+        <footer>
+            <button class="showMe" onclick="buttonClick()">Random Podcast</button>
+        </footer>
+    </section>
+
+    <script>
+        function buttonClick(){
+            document.getElementById("showMe").style.display = "flex"
+        }
+
+        function closeMe(){
+            document.getElementById("showMe").style.display = "none"
+        }
+    </script>
+</body>
+</html>

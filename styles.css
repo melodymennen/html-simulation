@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#aside {
+    background-color: maroon;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    text-overflow: ellipsis;
+    font-size: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+
+h1 + h4 {
+    margin: 10px 0;
+}
+
+.left {
+    width: 25%;
+    float: left;
+}
+
+.right {
+    width: 75%;
+    float: right;
+}
+
+.main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+    transition: font-size 2s;
+}
+
+.tile:hover {
+    font-size: 20px;
+}
+
+.tile span {
+    margin: 10px;
+}
+
+footer {
+    height: 70px;
+    width: 75%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showMe:focus {
+    background-color: azure;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: rgba(150, 150, 150, 0);
+    text-decoration: underline;
+}
+
+#showMe {
+    height: 300px;
+    width: 420px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(150, 150, 150, .5); 
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .left {
+        width: 30%;
+    }
+
+    .right, footer {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #aside {
+        height: 140px;
+    }
+
+    .left {
+        width: 100%;
+        float: none;
+    }
+
+    .right, footer {
+        width: 100%;
+        float: none;
+    }
+}
